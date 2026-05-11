@@ -41,12 +41,12 @@ final class VoeExtractorTests: XCTestCase {
         }
     }
     
-    func testBunnyVideo() throws {
+    func testAvailableVideo() throws {
         let url = try testSourceURL(URL(string: "https://voe.sx/0yobz5vmro7j")!) // TODO: upload own video
         
         XCTAssertEqual(url.pathExtension, "m3u8")
         
-        print("extracted \(String(describing: url)) for bunny video")
+        print("extracted \(String(describing: url)) for available video")
     }
     
 #endif
@@ -103,7 +103,7 @@ final class VoeExtractorTests: XCTestCase {
     static var allTests = [
         ("testUnavailableURL", testUnavailableURL),
         ("testIncorrectURL", testIncorrectURL),
-        ("testBunnyVideo", testBunnyVideo),
+        ("testAvailableVideo", testAvailableVideo),
         ("testHTMLExtraction", testHTMLExtraction)
     ]
     #endif
